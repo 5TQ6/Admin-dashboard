@@ -1,0 +1,53 @@
+:root {
+    --dashboard-color: #E4E9BE;
+    --sidebar-color: #FFF6EA;
+    --header-color: #F7E9D7;
+    --main-color: #EBD8C3;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+body {
+    background-image: url(./background.svg);
+    
+}
+
+.dashboard {
+    width: 90%;
+    height: 90%;
+    background-color: var(--dashboard-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 3em;
+
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+.sidebar {
+    background-color: var(--sidebar-color);
+    grid-row: 1 / 6;
+    grid-column: 1 / 2;
+    border-radius: 40px 0 0 40px;
+    z-index: 1;
+}
+.header {
+    background-color: var(--header-color);
+    grid-row: 1 / 2;
+    grid-column: 2 / 6;
+    border-radius: 0 40px 0 0;
+    z-index: 2;
+}
+.main {
+    background-color: var(--main-color);
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    border-radius: 0 0 40px 0;
+    box-shadow: 5px 5px 30px 4px rgb(181, 181, 181) inset;
+
+}
